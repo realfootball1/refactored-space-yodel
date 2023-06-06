@@ -1,31 +1,295 @@
-.App {
-  text-align: center;
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0e2e49
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loader {
+  border: 3px solid #f3f3f3; /* Light gray border */
+  border-top: 3px solid #435c24; /* Blue border on top */
+  border-left: 3px solid #435c24; /* Blue border on top */
+  border-right: 3px solid #435c24; /* Blue border on top */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+header.App-header .contain
+{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: auto;
+  padding: 20px
+}
+header.App-header
+{
+  background: #0e2e49;
+  border-bottom: 2px solid #0b2237
 }
 
-.App-link {
-  color: #61dafb;
+.img svg{
+  height: 60px
 }
 
-.heart {
-  color: #ff0000;
+.join-access a{
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
 }
 
-.small {
-  font-size: 0.75rem;
+.join-access{
+  margin-top: 2%;
+  width: 18%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5%;
+  padding: 10px 30px 10px 0px;
+  border-right: 3px solid #fff
 }
+
+.regg{
+  display: block
+}
+.reg{
+  display: none
+}
+
+#pshow{
+  display: none;
+}
+
+
+#formms{
+  display: none;
+}
+
+
+.please{
+  margin: 0;
+  font-size: 14px;
+  color: #b72b30;
+  font-weight: bold;
+}
+#new-to-usaa svg
+{
+  height: 719px;
+    width: auto;
+    opacity: .09;
+}
+#new-to-usaa .container h1{
+  font-family: Mercury Display,Times,serif;
+  font-size: 33px;
+  font-weight: 100;
+}
+#new-to-usaa .container .boxer a{
+  font-size: 1.26562rem;
+  width: 8.125rem;
+  padding: 20px 31px;
+  background: #fff;
+    font-weight: 500;
+    height: 60px;
+    width: 196px;
+    color: #06688a;
+    text-decoration: none;
+}
+#new-to-usaa .container .boxer{
+  width: 450px;
+  color: #fff
+}
+#new-to-usaa .container .boxer p{
+  font-size: 22px;
+  margin-top: 7px;
+  margin-bottom: 65px;
+  font-weight: 100;
+}
+#new-to-usaa .container
+{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    width: 70%;
+    display: flex;
+    justify-content: space-between
+}
+#new-to-usaa{
+  background: #0e2e49;
+}
+
+.formal button{
+  padding: 20px 31px;
+    height: 64px;
+    width: 100%;
+    font-weight: bolf;
+    color: #fff;
+        font-size: 1.26562rem;
+    min-width: 8.125rem;
+    background: linear-gradient(#54732d,#435c24);
+    box-shadow: inset 0 -2px 0 0 #32451b;
+    color: #fff;
+    border:  none;
+}
+.formal{
+      background-color: #fff;
+    color: #3e4042;
+    padding: 0 24px;
+    margin: 0;
+    width: 328px;
+    max-width: calc(100% - 48px);
+    z-index: 1;
+    text-align: center;
+}
+
+.label input{
+  width: 98%;
+  border: none;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  font-size: 1.375rem;
+  outline: none;
+}
+.label label{
+  font-size: 1.125rem;
+  color: #3e4042;
+}
+.labell{
+  text-align: left;
+  border-top: 1px solid #0b2237;
+  border-bottom: 1px solid #0b2237;
+  padding: 5px;
+  cursor: pointer;
+}
+.label{
+  text-align: left;
+  border: 1px solid #0b2237;
+  padding: 10px;
+  border: 1px solid #7d7c7c;
+}
+
+.formal a
+{
+  color: #00668a
+}
+#formal{
+  display: none;
+}
+
+
+footer#footer .containfoot #ulls li{
+  list-style: none;
+  text-align: left;
+  font-weight: 100;
+
+}
+footer#footer .containfoot #ulls{
+  display: flex;
+  padding: 0;
+  width: 30%;
+  justify-content: space-between;
+  text-decoration: underline;
+}
+footer#footer .containfoot p{
+  font-size: 14px
+}
+footer#footer .containfoot{
+  width: 90%;
+  margin: auto;
+  color: #fff;
+}
+footer#footer{
+  background: #0e2e49;
+}
+.usr{
+  display: block;
+}
+.regg{
+  display: block
+}
+.reg{
+  display: none
+}
+
+      
+
+#pwd{
+        display: none;
+      }
+
+      #sorry{
+        padding: 10px;
+        color: #000;
+        background: #fef4cd;
+      }
+      .sorry{
+        display: none;
+      }
+      #buttt{
+        display: none;
+      }
+
+      @media(max-width: 1000px){
+
+  
+
+        footer#footer .containfoot #ulls{
+          flex-direction: column;
+          width: 100%
+        }
+        #new-to-usaa .container .boxer{
+          display: none
+        }
+        #new-to-usaa .container h1{
+          font-weight: 500
+        }
+        .formal{
+          width:100%;
+        }
+        
+        .regg{
+          display: none
+        }
+        .reg{
+          display: block
+        }
+        
+        #new-to-usaa svg{
+          display: none;
+        }
+        
+        #new-to-usaa .container{
+          position: relative
+        }
+        
+        .join-access a{
+          font-size: 12px;
+          font-weight: bold;
+        }
+        .join-access{
+          width: 40%
+        }
+        #new-to-usaa .container{
+          width: 100%
+        }
+        .label input{
+          width: 90%
+        }
+        
+        
+        }
